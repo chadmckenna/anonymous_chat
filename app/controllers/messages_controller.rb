@@ -3,6 +3,7 @@ class MessagesController < ApplicationController
     @messages = Message.find_all_by_room_id(params[:room_id])
 
     respond_to do |format|
+      format.html { redirect_to root_url }
       format.json { render json: @messages }
     end
   end
@@ -17,8 +18,10 @@ class MessagesController < ApplicationController
 
     respond_to do |format|
       if @message.save
+        format.html { redirect_to root_url }
         format.json { render json: @message }
       else
+        format.html { redirect_to root_url }
         format.json { render json: @message.errors, status: :unprocessable_entity }
       end
     end
