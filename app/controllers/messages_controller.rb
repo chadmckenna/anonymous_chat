@@ -1,4 +1,6 @@
 class MessagesController < ApplicationController
+  # GET /messages
+  # GET /messages.json
   def index
     @messages = Message.find_all_by_room_id(params[:room_id])
 

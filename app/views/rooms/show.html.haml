@@ -1,20 +1,26 @@
-.row
-  .span6
-    != '&larr;'
-    = link_to 'Back', root_url
-.row
-  .span6
-    %h3= "##{params[:id]}"
-.row.messages
-  .span6
-    #messages{ style: "overflow: auto; max-height: 400px;" }
-.row.add-message{ style: "margin-top: 20px;" }
-  .span6
-    .message
-      %input#message{ type: "text", style: "width: 95%;" }
-.room-id.hide{ "data-room-id" => @room.id }
-.room-string.hide{ "data-room-string" => @room.room_string }
-.user-string.hid{ "data-user-string" => @user_string }
+.row-fluid
+  .span6.offset3
+    .row-fluid
+      .span12
+        != '&larr;'
+        = link_to 'Back', root_url
+    .row-fluid
+      .span12
+        %h3= "##{params[:id]}"
+        %p.muted
+          %small= @url_path
+    .row-fluid.messages
+      .span12
+        #messages{ style: "overflow: auto;" }
+    .row-fluid.add-message{ style: "margin-top: 20px;" }
+      .span12
+        .message
+          %input#message{ type: "text", placeholder: 'Type your message here...' }
+
+  .room-id.hide{ "data-room-id" => @room.id }
+  .room-string.hide{ "data-room-string" => @room.room_string }
+  .user-string.hid{ "data-user-string" => @user_string }
+
 :javascript
   var messages = new Messages(#{@messages.to_json});
   $(document).ready(function() {

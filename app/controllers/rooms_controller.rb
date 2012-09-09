@@ -6,7 +6,15 @@ class RoomsController < ApplicationController
     redirect_to root_path and return if @room.nil?
     
     @messages = Message.find_all_by_room_id(@room.id)
-    @user_string = random_string
+
+    @url_path = "#{request.protocol}#{request.host_with_port}#{request.fullpath}"
+
+    if cookies[:user_string]
+      @user_string = cookies[:user_string]
+    else
+      @user_string = random_string
+      cookies[:user_string] = @user_string
+    end
 
     respond_to do |format|
       format.html # show.html.erb

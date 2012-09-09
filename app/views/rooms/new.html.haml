@@ -1,14 +1,23 @@
-.row
-  .span6
-    %h2
-      = "Anonymous Chat"
-    %p
-      Create anonymous chat rooms. Share the url anywhere.
-    %p
-      Get started by clicking the 'Create Room' button. <strong>Just remember</strong>, everytime you refresh the page, you are assigned a new user name.
-    %p
-      Your messages are designated with a <span class="label label-success">AJFKLEQO</span> label and everyone elses are designated with a <span class="label">PRJXLAWQ</span> label.
-.row
-  .span6
-    %p
-      = button_to 'Create Room', rooms_path, method: :post, class: "btn btn-primary btn-large"
+.row-fluid
+  .span6.offset3
+    .row-fluid
+      .span12
+        %h2
+          = "Anonymous Chat"
+        %p
+          Create anonymous chat rooms. Share the url anywhere. No login required.
+        %p
+          Get started by clicking the 'Create Room' button. The unique url created can be shared anywhere for anyone to access. Your 'username' is stored as a cookie on the client side and it is the only unique identifier we store server side. You can remove the cookie at any time and a new 'username' will be assigned to you.
+        %p
+          Messages sent from your 'username' are designated with a <span class="label label-success">AJFKLEQO</span> label and messages sent from other users are designated with a <span class="label">PRJXLAWQ</span> label.
+
+    .row-fluid
+      .span12
+        %p
+          = button_to 'Create Room', rooms_path, method: :post, class: "btn btn-primary btn-large"
+
+    .row-fluid
+      .span12
+        %p.pull-right.muted
+          %small
+            = link_to '@chadmckenna', 'https://github.com/chadmckenna'
