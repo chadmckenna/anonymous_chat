@@ -1,11 +1,11 @@
-# Anonymous Chat
+= Anonymous Chat
 
 -----------------------------
 
-## Create anonymous chat rooms. Share the url anywhere. No login required.
+==== Create anonymous chat rooms. Share the url anywhere. No login required.
 
 Its an anonymous chat room app built with backbone.js, Twitter bootstrap, and Rails 3.2. Its not doing push notifications, it's just polling the server every three seconds. 
 
 Its still pretty cool.
 
-Demo it [here](http://anonymouschat.heroku.com)
+[DEMO IT!](http://anonymouschat.heroku.com)
