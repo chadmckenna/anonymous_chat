@@ -1,0 +1,14 @@
+.row
+  .span6
+    %h2
+      = "Anonymous Chat"
+    %p
+      Create anonymous chat rooms. Share the url anywhere.
+    %p
+      Get started by clicking the 'Create Room' button. <strong>Just remember</strong>, everytime you refresh the page, you are assigned a new user name.
+    %p
+      Your messages are designated with a <span class="label label-success">AJFKLEQO</span> label and everyone elses are designated with a <span class="label">PRJXLAWQ</span> label.
+.row
+  .span6
+    %p
+      = button_to 'Create Room', rooms_path, method: :post, class: "btn btn-primary btn-large"

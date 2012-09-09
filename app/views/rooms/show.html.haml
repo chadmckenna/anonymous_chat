@@ -1,0 +1,26 @@
+.row
+  .span6
+    != '&larr;'
+    = link_to 'Back', root_url
+.row
+  .span6
+    %h3= "##{params[:id]}"
+.row.messages
+  .span6
+    #messages{ style: "overflow: auto; max-height: 400px;" }
+.row.add-message{ style: "margin-top: 20px;" }
+  .span6
+    .message
+      %input#message{ type: "text", style: "width: 95%;" }
+.room-id.hide{ "data-room-id" => @room.id }
+.room-string.hide{ "data-room-string" => @room.room_string }
+.user-string.hid{ "data-user-string" => @user_string }
+:javascript
+  var messages = new Messages(#{@messages.to_json});
+  $(document).ready(function() {
+    var messages_view = new MessagesView( { collection: messages, el: $('#messages') });
+    messages_view.render();
+    setInterval(function() { 
+        messages.fetch();
+      }, 3000);
+  });
