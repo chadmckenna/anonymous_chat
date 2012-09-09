@@ -2,6 +2,8 @@ Anonymous Chat
 
 -----------------------------
 
-Its an anonymous chat client built with backbone.js and Rails. Its not doing push notifications, its just polling the server every three seconds. Its still pretty cool.
+Its an anonymous chat room app built with backbone.js, Twitter bootstrap, and Rails 3.2. Its not doing push notifications, it's just polling the server every three seconds. 
 
-Demo it at http://anonymouschat.heroku.com
+Its still pretty cool.
+
+Demo it at "http://anonymouschat.heroku.com/"
