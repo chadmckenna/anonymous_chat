@@ -6,4 +6,4 @@ Its an anonymous chat room app built with backbone.js, Twitter bootstrap, and Ra
 
 Its still pretty cool.
 
-Demo it at "http://anonymouschat.heroku.com/"
+Demo it <a href="http://anonymouschat.heroku.com/">here</a>
