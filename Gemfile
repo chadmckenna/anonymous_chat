@@ -25,7 +25,7 @@ group :assets do
 end
 
 group :development do
-
+  gem 'heroku'
 end
 
 group :production do
