@@ -3,6 +3,8 @@ class RoomsController < ApplicationController
   # GET /rooms/1.json
   def show
     @room = Room.find_by_room_string(params[:id])
+    redirect_to root_path and return if @room.nil?
+    
     @messages = Message.find_all_by_room_id(@room.id)
     @user_string = random_string
 
